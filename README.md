@@ -1,3 +1,5 @@
-# python-project
+# PACKAGENAME
 
-Project template for Python
+PACKAGENAME for Python
+
+Run ``bin/init_repo`` to initialize the repository.
