@@ -105,3 +105,4 @@ venv.bak/
 
 # Emacs editor stuff
 .dir-locals.el
+\#*#
