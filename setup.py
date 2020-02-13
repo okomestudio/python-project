@@ -21,9 +21,11 @@ def meta(category, fpath="src/PACKAGENAME/__init__.py"):
 
 requires = []
 
-setup_requires = ["isort", "pre-commit"]
+setup_requires = []
 
-test_requires = ["pytest"]
+dev_requires = ["isort", "pre-commit"]
+
+tests_require = ["pytest"]
 
 setup(
     name="PACKAGENAME",
@@ -39,7 +41,7 @@ setup(
     scripts=[],
     install_requires=requires,
     setup_requires=setup_requires,
-    tests_require=test_requires,
-    extras_require={"test": test_requires},
+    tests_require=tests_require,
+    extras_require={"dev": dev_requires},
     entry_points={"console_scripts": []},
 )
