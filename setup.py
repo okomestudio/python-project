@@ -21,7 +21,7 @@ def meta(category, fpath="src/PACKAGENAME/__init__.py"):
 
 requires = []
 
-setup_requires = ["pre-commit"]
+setup_requires = ["isort", "pre-commit"]
 
 test_requires = ["pytest"]
 
