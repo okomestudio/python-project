@@ -23,7 +23,7 @@ requires = []
 
 setup_requires = []
 
-dev_requires = ["isort", "pre-commit"]
+dev_requires = ["flake8", "isort", "pre-commit"]
 
 tests_require = ["pytest"]
 
