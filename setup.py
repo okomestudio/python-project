@@ -49,7 +49,7 @@ tests_require = ["coverage[toml]>=5.0.4", "pytest>=5.4.1", "pytest-cov>=2.8.1"]
 setup(
     name="PACKAGENAME",
     version=version,
-    description="PACKAGENAME for Python",
+    description="REPONAME for Python",
     long_description=readme,
     long_description_content_type="text/markdown",
     author=author,
