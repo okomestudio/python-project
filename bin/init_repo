@@ -13,13 +13,13 @@ The repository init script. Run this once and remove.
   -q            Do not output any status messages
 
 USAGE
-  exit ${1:-1}
+  exit "${1:-1}"
 }
 
 
 function error() {
   [[ "$QUIET" -ne 1 ]] && >&2 echo "ERROR: $1"
-  exit ${2:-1}
+  exit "${2:-1}"
 }
 
 
@@ -33,17 +33,18 @@ function main() {
   REPONAME=$2
 
   directories=(src tests)
-  for directory in ${directories[@]}; do
-    [[ -d $directory/PACKAGENAME ]] \
-      && git mv $directory/PACKAGENAME $directory/$PACKAGENAME \
+  for directory in "${directories[@]}"; do
+    if [[ -d $directory/PACKAGENAME ]]; then
+      git mv "$directory/PACKAGENAME" "$directory/$PACKAGENAME" \
         || warning "$directory/PACKAGENAME does not exist"
+    fi
   done
-  
-  filenames=(README.md setup.py)
-  for filename in ${filenames[@]}; do
+
+  filenames=(README.md setup.cfg setup.py)
+  for filename in "${filenames[@]}"; do
     if [[ -f $filename ]]; then
-      sed -i -e 's/PACKAGENAME/'"$PACKAGENAME"'/g' $filename
-      sed -i -e 's/REPONAME/'"$REPONAME"'/g' $filename
+      sed -i -e 's/PACKAGENAME/'"$PACKAGENAME"'/g' "$filename"
+      sed -i -e 's/REPONAME/'"$REPONAME"'/g' "$filename"
     else
       warning "$filename does not exist"
     fi
@@ -67,7 +68,7 @@ while getopts "hq" opt; do
       ;;
   esac
 done
-shift $(($OPTIND - 1))
+shift $((OPTIND - 1))
 
 PACKAGENAME=$1
 [[ -z $PACKAGENAME ]] && error "PACKAGENAME is required"
