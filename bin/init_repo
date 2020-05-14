@@ -40,7 +40,7 @@ function main() {
     fi
   done
 
-  filenames=(README.md setup.cfg setup.py)
+  filenames=(README.rst setup.cfg setup.py)
   for filename in "${filenames[@]}"; do
     if [[ -f $filename ]]; then
       sed -i -e 's/PACKAGENAME/'"$PACKAGENAME"'/g' "$filename"
