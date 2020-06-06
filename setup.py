@@ -51,7 +51,7 @@ setup(
     version=version,
     description="REPONAME for Python",
     long_description=readme,
-    long_description_content_type="text/markdown",
+    long_description_content_type="text/x-rst",
     author=author,
     author_email=author_email,
     classifiers=[
