@@ -56,7 +56,7 @@ setup(
     author_email=author_email,
     classifiers=[
         "Development Status :: 3 - Alpha",
-        "Audience :: Developers",
+        "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: POSIX :: Linux",
         "Programming Language :: Python :: 3",
