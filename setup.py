@@ -37,13 +37,18 @@ setup_requires = ["pytest-runner>=5.2"]
 
 dev_requires = [
     "black>=19.10b0",
-    "flake8>=3.7.9",
-    "isort[pyproject]>=4.3.21",
-    "pre-commit>=2.2.0",
-    "seed-isort-config>=2.1.1",
+    "flake8>=3.8.3",
+    "isort[pyproject]>=5.4.1",
+    "pre-commit>=2.6.0",
+    "seed-isort-config>=2.2.0",
 ]
 
-tests_require = ["coverage[toml]>=5.0.4", "pytest>=5.4.1", "pytest-cov>=2.8.1"]
+tests_require = [
+    "coverage[toml]>=5.2.1",
+    "pytest>=6.0.1",
+    "pytest-cov>=2.10.0",
+    "pytest-mock>=3.2.0",
+]
 
 
 setup(
