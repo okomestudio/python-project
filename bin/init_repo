@@ -31,6 +31,7 @@ function warning() {
 function main() {
   PACKAGENAME=$1
   REPONAME=$2
+  VERSION="$(date +'%y.%-m').0"
 
   directories=(src tests)
   for directory in "${directories[@]}"; do
@@ -45,6 +46,7 @@ function main() {
     if [[ -f $filename ]]; then
       sed -i -e 's/PACKAGENAME/'"$PACKAGENAME"'/g' "$filename"
       sed -i -e 's/REPONAME/'"$REPONAME"'/g' "$filename"
+      sed -i -e 's/VERSION/'"$VERSION"'/g' "$filename"
     else
       warning "$filename does not exist"
     fi

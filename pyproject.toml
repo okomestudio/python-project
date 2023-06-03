@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "PACKAGENAME"
-version = "1.0.0"
+version = "VERSION"
 authors = [{name="Taro Sato", email="okomestudio@gmail.com"}]
 description = "REPONAME for Python"
 readme = "README.rst"
