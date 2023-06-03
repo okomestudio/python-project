@@ -4,4 +4,8 @@ PACKAGENAME
 
 *REPONAME* for Python
 
-Run ``bin/init_repo`` to initialize the repository.
+To initialize the repository, run:
+
+.. code-block:: shell
+
+   bin/init_repo PACKAGENAME
