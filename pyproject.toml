@@ -26,8 +26,10 @@ dependencies = []
 dev = [
     "black==23.3.0",
     "flake8==6.0.0",
+    "flake8-docstrings==1.7.0",
     "isort[pyproject]==5.12.0",
     "pre-commit==3.3.2",
+    "pydocstyle[toml]==6.3.0",
 ]
 
 test = [
@@ -42,7 +44,7 @@ test = [
 "Buck Tracker" = "https://github.com/okomestudio/REPONAME/issues"
 
 [project.scripts]
-REPONAME = "REPONAME.__main__:main"
+REPONAME = "PACKAGENAME.__main__:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
@@ -52,7 +54,6 @@ package-data = {"PACKAGENAME" = []}
 
 [tool.black]
 line-length = 88
-py36 = true
 include = '\.pyi?$'
 exclude = '''
 /(
@@ -81,7 +82,10 @@ exclude_lines = [
 
 [tool.isort]
 line_length = 88
-force_single_line = true
+force_single_line = false
+
+[tool.pydocstyle]
+convention = "google"
 
 [tool.pytest.ini_options]
 minversion = "7.3"
